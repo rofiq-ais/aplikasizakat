@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zakat Uang</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="uang box">
+        <h1 class="judul">Zakat Uang</h1>
+        <label for="hargaPerak">Harga Perak saat ini</label>
+        <input placeholder="Rp./gram" type="text" id="hargaPerak" />
+        <p class="nb">tanpa titik</p>
+        <label for="nominalUang">Nominal Uang</label>
+        <input placeholder="Rp." type="text" id="nominalUang" />
+        <p class="nb">tanpa titik</p>
+        <button id="uang" onclick="applyUang()">APPLY</button>
+        <p class="refresh" id="freshUang" onclick="hapusUang()">refresh</p>
+        <p class="result" id="hasilUang"></p>
+        <p class="close">
+          <a href="harta.html"> kembali </a>
+        </p>
+      </section>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

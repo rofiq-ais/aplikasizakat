@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zakat Tanaman</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="tanaman box">
+        <h1 class="judul">Zakat Tanaman</h1>
+        <label for="siram">Metode Pengairan</label>
+        <select name="" id="siram">
+          <option value="alami">Pengairan Alami</option>
+          <option value="mesin">Pengairan Mesin</option>
+        </select>
+        <div class="conten">
+          <p class="alami">Pengairan alami semisal Hujan dan Aliran Sungai.</p>
+          <p class="mesin">Pengairan mesin semisal Sumur dan Disel.</p>
+        </div>
+        <label for="beratPanen">Berat Hasil Panen</label>
+        <input placeholder="kg" type="text" id="beratPanen" />
+        <!-- <label for="karat">Karat Emas</label>
+        <input type="text" id="karat" /> -->
+        <button id="tanaman" onclick="applyTanaman()">APPLY</button>
+        <p class="refresh" id="freshTanaman" onclick="hapusTanaman()">
+          refresh
+        </p>
+        <p class="result" id="hasilTanaman"></p>
+        <p class="close">
+          <a href="menu.html"> kembali </a>
+        </p>
+      </section>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

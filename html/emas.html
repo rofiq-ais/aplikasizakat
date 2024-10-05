@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zakat Emas</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="emas box">
+        <h1 class="judul">Zakat Emas</h1>
+        <label for="beratEmas">Berat Emas</label>
+        <input type="text" id="beratEmas" placeholder="gram" />
+        <label for="karatEmas">Karat Emas</label>
+        <input type="text" id="karatEmas" />
+        <button id="emas" onclick="applyEmas()">APPLY</button>
+        <p class="refresh" id="freshEmas" onclick="hapusEmas()">refresh</p>
+        <p class="result" id="hasilEmas"></p>
+        <p class="close">
+          <a href="harta.html"> kembali </a>
+        </p>
+      </section>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
