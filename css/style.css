@@ -39,7 +39,7 @@
 p.close {
   margin-top: 15px;
 }
-p.close a {
+p.close a,.developer {
   color: grey;
   text-decoration: none;
 }
@@ -50,6 +50,10 @@ p.close a {
   margin: 5px;
   font-size: 1rem;
   font-weight: 700;
+}
+.developer{
+  font-size: small;
+  text-decoration: none;
 }
 #masuk {
   background-color: rgb(9, 96, 196);
