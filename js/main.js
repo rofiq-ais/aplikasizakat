@@ -119,11 +119,22 @@ function applyUang() {
   if (hPerak != "" && nominalUang != "") {
     uang.resultUang.style.color = "black";
     if (nominalUang >= nishobUang) {
-      uang.resultUang.innerHTML = `Nishob mata uang saat ini adalah Rp. ${nishobUang}<br>Anda berkewajiban membayar zakat uang sebesar Rp. ${
-        (nominalUang * 2.5) / 100
-      }`;
+      function kewajibanZakat() {
+        let hitung = (nominalUang * 2.5) / 100;
+        return hitung.toLocaleString("id-ID", {
+          style: "currency",
+          currency: "IDR",
+        });
+      }
+      uang.resultUang.innerHTML = `Nishob mata uang saat ini adalah ${nishobUang.toLocaleString(
+        "id-ID",
+        { style: "currency", currency: "IDR" }
+      )}<br>Anda berkewajiban membayar zakat uang sebesar ${kewajibanZakat()}`;
     } else {
-      uang.resultUang.innerHTML = `Nishob mata uang saat ini adalah Rp. ${nishobUang} <br> Anda belum berkewajiban membayar zakat`;
+      uang.resultUang.innerHTML = `Nishob mata uang saat ini adalah Rp. ${nishobUang.toLocaleString(
+        "id-ID",
+        { style: "currency", currency: "IDR" }
+      )} <br> Anda belum berkewajiban membayar zakat`;
     }
   } else {
     uang.resultUang.style.color = "red";
@@ -163,20 +174,18 @@ function applyKambing() {
       kambing.resultKambing.innerHTML = `Anda berkewajiban mengeluarkan zakat sebanyak 1 ekor kambing`;
     } else if (hitungKambing >= 121 && hitungKambing <= 200) {
       kambing.resultKambing.innerHTML = `Anda berkewajiban mengeluarkan zakat sebanyak 2 ekor kambing`;
-    }else if(hitungKambing>200){
-      hitungKambing -=200;
-      finalKambing +=2;
-      while(hitungKambing>=100){
-        hitungKambing -=100;
-        finalKambing +=1;
+    } else if (hitungKambing > 200) {
+      hitungKambing -= 200;
+      finalKambing += 2;
+      while (hitungKambing >= 100) {
+        hitungKambing -= 100;
+        finalKambing += 1;
       }
-      if(hitungKambing > 0){
-        finalKambing+=1
+      if (hitungKambing > 0) {
+        finalKambing += 1;
       }
       kambing.resultKambing.innerHTML = `Anda berkewajiban mengeluarkan zakat sebanyak ${finalKambing} ekor kambing.`;
-
-    }
-    else {
+    } else {
       kambing.resultKambing.innerHTML = `Anda belum berkewajiban mengeluarkan zakat.`;
     }
   } else {
